@@ -274,5 +274,5 @@ export function MyForm() {
 ## Resources
 
 **Zod reference**: See [reference/zod.md](references/zod.md)
-**shadcn/ui reference**: See [reference/shadcn.md](references/shadcn.md)
+**shadcn/ui reference**: See [reference/shadcn.md](references/shadcn-ui.md)
 **React Hook Form reference**: See [reference/react-hook-form.md](references/react-hook-form.md)
