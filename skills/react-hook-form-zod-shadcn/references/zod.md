@@ -4,6 +4,7 @@
 
 - Error handling
 - Strings
+- Passwords
 - Arrays
 - Inferring types
 - Resources
@@ -45,6 +46,22 @@ To validate any WHATWG-compatible URL:
 
 ```tsx
 z.url({ error: "Invalid URL" });
+```
+
+### Passwords
+
+Use the following schema to validate password properties
+
+```tsx
+z.string()
+  .trim()
+  .min(12, { error: "Must be at least 12 characters." })
+  .regex(/[A-Z]/, { error: "Must contain at least one uppercase letter" })
+  .regex(/[a-z]/, { error: "Must contain at least one lowercase letter" })
+  .regex(/[0-9]/, { error: "Must contain at least one number" })
+  .regex(/[A-Za-z0-9]/, {
+    error: "Must contain at least one special character",
+  });
 ```
 
 ### Arrays
